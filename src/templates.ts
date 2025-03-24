@@ -79,4 +79,12 @@ export const useChatFE = new Template(drizzle, ({ props, utilities }) => ({
   }`,
 }));
 
-export const templates = [chatEndpoint, useChatFE];
+export const envFile = new Template(drizzle, ({ props, utilities }) => ({
+  title: `Environment Variables`,
+  description: "Configuration for API keys",
+  path: ".env",
+  template: `# OpenAI API key
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx`,
+}));
+
+export const templates = [chatEndpoint, useChatFE, envFile];
