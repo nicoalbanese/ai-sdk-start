@@ -7,9 +7,9 @@ const input = new Prompts(AI, (p) => ({
     p.select({
       message: "Which provider do you want to use?",
       options: [
-        { value: "openai", label: "OpenAI" },
-        { value: "google", label: "Google" },
-        { value: "anthropic", label: "Anthropic" },
+        { value: "openai" },
+        { value: "google" },
+        { value: "anthropic" },
       ],
     }),
   apiKey: () =>
