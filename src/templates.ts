@@ -79,11 +79,11 @@ export const useChatFE = new Template(drizzle, ({ props, utilities }) => ({
   }`,
 }));
 
-export const envFile = new Template(drizzle, ({ props, utilities }) => ({
+export const envFile = new Template(drizzle, ({ props }) => ({
   title: `Environment Variables`,
   description: "Configuration for API keys",
   path: ".env",
-  template: `# ${props.provider} API key
+  template: `# ${props.provider.toUpperCase()} API key
 ${props.provider.toUpperCase()}_API_KEY=${props.apiKey}`,
 }));
 
