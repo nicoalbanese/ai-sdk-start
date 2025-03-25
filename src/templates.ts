@@ -1,7 +1,7 @@
 import { Template } from "karozu";
-import { AI } from "./config";
+import { aiStarter } from "./config";
 
-export const chatEndpoint = new Template(AI, ({ props, utilities }) => ({
+export const chatEndpoint = new Template(aiStarter, ({ props, utilities }) => ({
   title: `Chat API Endpoint`,
   description: "The API route for your chatbot",
   path: "app/api/chat/route.ts",
@@ -32,7 +32,7 @@ export const chatEndpoint = new Template(AI, ({ props, utilities }) => ({
   }`,
 }));
 
-export const useChatFE = new Template(AI, () => ({
+export const useChatFE = new Template(aiStarter, () => ({
   title: `Frontend`,
   description: "The main useChat implementation",
   path: "app/page.tsx",
@@ -79,7 +79,7 @@ export const useChatFE = new Template(AI, () => ({
   }`,
 }));
 
-export const envFile = new Template(AI, ({ props }) => ({
+export const envFile = new Template(aiStarter, ({ props }) => ({
   title: `Environment Variables`,
   description: "Configuration for API keys",
   path: ".env",

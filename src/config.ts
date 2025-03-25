@@ -7,7 +7,7 @@ export const propSchema = z.object({
   apiKey: z.string().min(1).max(100).optional(),
 });
 
-export const AI = new Extension({
+export const aiStarter = new Extension({
   name: "AI SDK",
   version: "1.0.0",
   description: "Install AI SDK in your project.",
