@@ -4,6 +4,7 @@ import { baseUtilities } from "karozu/utils";
 
 export const propSchema = z.object({
   provider: z.enum(["openai", "google", "anthropic"]),
+  apiKey: z.string().min(1).max(100).optional(),
 });
 
 export const drizzle = new Extension({

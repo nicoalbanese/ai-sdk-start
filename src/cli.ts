@@ -12,6 +12,10 @@ const input = new Prompts(drizzle, (p) => ({
         { value: "anthropic" },
       ],
     }),
+  apiKey: () =>
+    p.text({
+      message: "Which provider do you want to use?",
+    }),
 }));
 
 export default new CLI(drizzle, templates, input);
