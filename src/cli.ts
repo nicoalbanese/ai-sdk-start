@@ -1,8 +1,8 @@
 import { CLI, Prompts } from "karozu/cli";
-import { drizzle } from "./config";
+import { AI } from "./config";
 import { templates } from "./templates";
 
-const input = new Prompts(drizzle, (p) => ({
+const input = new Prompts(AI, (p) => ({
   provider: () =>
     p.select({
       message: "Which provider do you want to use?",
@@ -18,4 +18,4 @@ const input = new Prompts(drizzle, (p) => ({
     }),
 }));
 
-export default new CLI(drizzle, templates, input);
+export default new CLI(AI, templates, input);

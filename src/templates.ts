@@ -1,7 +1,7 @@
 import { Template } from "karozu";
-import { drizzle } from "./config";
+import { AI } from "./config";
 
-export const chatEndpoint = new Template(drizzle, ({ props, utilities }) => ({
+export const chatEndpoint = new Template(AI, ({ props, utilities }) => ({
   title: `Chat API Endpoint`,
   description: "The API route for your chatbot",
   path: "app/api/chat/route.ts",
@@ -32,7 +32,7 @@ export const chatEndpoint = new Template(drizzle, ({ props, utilities }) => ({
   }`,
 }));
 
-export const useChatFE = new Template(drizzle, ({ props, utilities }) => ({
+export const useChatFE = new Template(AI, () => ({
   title: `Frontend`,
   description: "The main useChat implementation",
   path: "app/page.tsx",
@@ -79,7 +79,7 @@ export const useChatFE = new Template(drizzle, ({ props, utilities }) => ({
   }`,
 }));
 
-export const envFile = new Template(drizzle, ({ props }) => ({
+export const envFile = new Template(AI, ({ props }) => ({
   title: `Environment Variables`,
   description: "Configuration for API keys",
   path: ".env",

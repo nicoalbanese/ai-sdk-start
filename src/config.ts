@@ -7,7 +7,7 @@ export const propSchema = z.object({
   apiKey: z.string().min(1).max(100).optional(),
 });
 
-export const drizzle = new Extension({
+export const AI = new Extension({
   name: "AI SDK",
   version: "1.0.0",
   description: "Install AI SDK in your project.",
@@ -33,7 +33,7 @@ export const drizzle = new Extension({
       ],
       google: [
         {
-          packageName: "@google-cloud/sql",
+          packageName: "@ai-sdk/google",
           version: "latest",
         },
       ],
