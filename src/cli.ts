@@ -14,7 +14,7 @@ const input = new Prompts(drizzle, (p) => ({
     }),
   apiKey: () =>
     p.text({
-      message: "Which provider do you want to use?",
+      message: "Please provide your API key:",
     }),
 }));
 
